@@ -7,7 +7,7 @@ const Nav = () => {
 
     const [active, setActive] = useState(false);
     return <>
-        <header className="w-full flex items-center justify-between sm:justify-around  p-3 border-b-2 border-gray-200 z-50">
+        <header className="w-full flex z-40 items-center justify-between sm:justify-around  p-3 border-b-2 border-gray-200">
            <a href="/"><h1 className="font-bold text-xl text-orange-500">Logo</h1></a>
 
             <div className="flex text-black sm:hidden cursor-pointer" onClick={()=>setActive(true)} >
