@@ -1,6 +1,15 @@
+import Input from "../components/input"
+
 const Colors = ()=>{
     return <>
-    <h2>Colors</h2>
+    <div className="category">
+        <h2 className="text-xl font-bold">Colors</h2>
+        <div className="categories flex flex-col gap-1 mt-2">
+           <Input/>
+           
+            
+        </div>
+    </div>
     </>
 }
 

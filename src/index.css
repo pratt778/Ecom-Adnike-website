@@ -23,4 +23,24 @@
     .list-cont input:checked ~ .checkmark::after{
         display: block;
     }
+    .list-p:hover input~.checkmark-p{
+        background-color: #ccc;
+    }
+    .list-p input:checked ~.checkmark-p{
+        background-color: darkcyan;
+    }
+    .checkmark-p::after{
+        content: '';
+        position: absolute;
+        background-color: white;
+        width: 7px;
+        height: 7px;
+        left: 6px;
+        top: 6.5px;
+        border-radius: 50%;
+        display: none;
+    }
+    .list-p input:checked ~ .checkmark-p::after{
+        display: block;
+    }
 }
