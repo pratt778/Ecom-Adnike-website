@@ -3,7 +3,7 @@ import { AiFillHeart, AiOutlineUser, AiOutlineMenu } from "react-icons/ai";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { AiOutlineClose } from "react-icons/ai";
 
-const Nav = () => {
+const Nav = ({handleInputTextChange,query}) => {
 
     const [active, setActive] = useState(false);
     return <>
@@ -15,7 +15,7 @@ const Nav = () => {
             </div>
             <nav className="hidden sm:flex w-[70%] justify-between transition-all duration-500 ease-in-out">
                 <div className="text-container px-3 py-2 rounded-md  bg-gray-200 w-[250px] md:w-[350px] lg:w-[450px] xl:w-[550px]">
-                    <input type="text" placeholder="Search Your Product Here...." className="bg-transparent w-full outline-none" />
+                    <input type="text" placeholder="Search Your Product Here...." className="bg-transparent w-full outline-none" onChange={handleInputTextChange} value={query} />
                 </div>
 
                 <div className="profile-container flex items-center gap-6">

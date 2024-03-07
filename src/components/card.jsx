@@ -1,17 +1,16 @@
 
 import { AiFillStar } from "react-icons/ai"
 import { BsBagFill } from "react-icons/bs";
-// import data from "../data/data_prod";
-const Card = ()=>{
+const Card = ({img,title,star,reviews,prevPrice,newPrice})=>{
 
 
 
     return<>
-     <div className="card-item flex flex-col gap-2 border-2 border-gray-200  w-fit px-2 py-5 rounded-md sm:gap-3">
-                        <img src="https://m.media-amazon.com/images/I/519MRhRKGFL._AC_UX575_.jpg" className="w-[160px]" alt="" />
-                        <h3 className="prod-name font-semibold">Nike Air Monarch Iv </h3>
-                        <div className="ratings flex text-orange-600"><AiFillStar/><AiFillStar/><AiFillStar/></div>
-                        <p className="newp flex gap-2"><del>$140</del>$200</p>
+     <div className="card-item flex flex-col gap-2 border-2 border-gray-200  w-fit px-2 py-5 rounded-md sm:gap-3 cursor-pointer">
+                        <img src={img} className="h-[100px]" width={200}  alt="" />
+                        <h3 className="prod-name font-semibold">{title}</h3>
+                        <div className="ratings flex text-orange-600">{star}{star}{star}{star}</div>
+                        <p className="newp flex gap-2"><del>{prevPrice}</del>{newPrice}</p>
                         <p className="text-red-500"><BsBagFill/></p>
                     </div>
     
